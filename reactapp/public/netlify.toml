@@ -1,1 +1,13 @@
-/*    /index.html   200
+[build]
+  base = "reactapp" 
+  publish = "build"
+  functions = "netlify/functions"
+
+[build.environment]
+  REACT_APP_API_URL = "https://api.example.com"
+  API_KEY = "your-secret-api-key"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
